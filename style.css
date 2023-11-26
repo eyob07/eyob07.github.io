@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #181818;
+  --black-light: #333333;
+  --white: #fdfdfd;
+  --gray: #dddddd;
+  --blue: #6078ff;
+}
+ 
+body  {
+  max-width: 70ch;
+  padding: 0 2ch;
+  line-height: 1.75;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5em auto ;
+
+  Golor: var(--black-light);
+  background: var(--white);
+
+  font-size: large;
+}
+
+h1,h2 {
+  color: var(--black);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 40ch;
+}
+.hero {
+  text-align: center;
+}
+
+.hero-img img {
+  width: 80%;
+  border-radius: 50%;
+}
+
+hr {
+  width: 10ch;
+  margin: 4ch auto;
+}
+
+h2{
+  position: relative;
+  text-decoration: none;
+
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  text-decoration-color: var(--blue);
+}
+
+/* h2:after { */
+/*   content: ""; */
+/*   position: absolute; */ 
+/*   left: 0; */
+/*   bottom: -5px; */
+/*   width: 10ch; */
+/*   height: .5ch; */
+/*   background: linear-gradient(to right, var(--blue) 0%, blue 100%); */
+/* } */
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 20px; 
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  padding: 0;
+  margin: 0;
+}
+
+li  img {
+  width: 2ch;
+}
+
+:not(header) img{
+  width: 2ch;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 5ch);
+  grid-gap: 1ch;
+  margin: 0;
+  padding: 0;
+}
+
+.skills li {
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  padding: 2ch;
+}
+
+.volunteering {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1ch;
+}
+
+.volunteering li {
+  display: flex;
+  justify-content: space-between;
+  background: var(--blue);
+  color: var(--white);
+  padding:  1ch;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  /* For mobile phones: */
+  .volunteering, .skills {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .skills li {
+    padding: 1ch;
+  }
+}
+
+
+
+
